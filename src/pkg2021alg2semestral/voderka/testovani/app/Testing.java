@@ -66,7 +66,7 @@ public class Testing {
             //calculating time of test in milliseconds
             long timeDuration = Duration.between(startTime, finishTime).toMillis();
             timeDuration = timeDuration/1000;
-            System.out.format("Your score: %n %s - %d/%d points, %d seconds %n", name, points, 4, timeDuration);
+            System.out.format("Your result: %n %s - %d/%d points, %d seconds %n", name, points, 4, timeDuration);
             System.out.println("Do you want to save your score?");
             String saving = sc.next();
             if(saving.toLowerCase().contains("yes"))
