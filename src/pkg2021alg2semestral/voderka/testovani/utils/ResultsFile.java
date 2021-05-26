@@ -63,7 +63,7 @@ public class ResultsFile {
         Result res = new Result(name, points, time);
         results.add(res);
         
-        try(DataOutputStream dos = new DataOutputStream(new FileOutputStream(new File("C:\\Users\\Martin\\Documents\\Semestral\\results.dat")))){
+        try(DataOutputStream dos = new DataOutputStream(new FileOutputStream(new File("data\\results.dat")))){
             for (Result r : results) {
                 dos.writeUTF(r.getName());
                 dos.writeInt(r.getPoints());

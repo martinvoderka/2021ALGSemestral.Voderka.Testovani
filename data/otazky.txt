@@ -1,4 +1,20 @@
-Jakou barvu ma klin na ceske vlajce?
-Jak zni krestni jmeno prezidenta ceske republiky?
-Jaka je sedma planeta Slunecni soustavy? 
-Vydelenim napeti proudem ziskame jakou velicinu?
+1. Jak se nazyva clovek zapaleny do oblasti informacnich technologii? 
+2. Jak zni krestni jmeno zakladatele spolecnosti Apple? 
+3. Jaka firma vytvorila Deep Blue, pocitac, ktery porazil Garryho Kasparova v sachovem turnaji? 
+4. Jaka byla zkratka pro prvni Ceskoslovensky pocitac vyrobeny v roce 1958? 
+5. Jak se nazyvala panika ohledne pocitacu pred novym rokem 2000? 
+6. Ktery bezztratovy graficky format byl v roce 1989 vyvinut pro obrazky a kratke animace? 
+7. Jaky programovaci jazyk se vyuziva pro technicke dokumenty? 
+8. Jak se nazyva technologie pro telefonovani skrz internet? 
+9. Jaky jazyk se pouziva pro pocitacove databaze? 
+10. Kolik bitu je 1 byte? (vyjadri cislem) 
+11. Co za zvíře je Tux, maskot operačního systému linux? 
+12. Jak se nazyva sit pro komunikaci uvnitr organizace/firmy? 
+13. Na jake soucastce byly postaveny pocitace druhe generace? 
+14. Jaka technologie je pojmenovana podle krale Norska a Danska, Harala Modrozuba? 
+15. Ktera pocitacova periferie byla vynalezena v roce 1964? 
+16. Jaka pocitacova komponenta se nazyva zkratkou CPU? 
+17. Jaky ciselny system pouziva pocitac? 
+18. Jaka zkratka se vyuziva pro oznaceni operacni pameti v pocitaci? 
+19. Jakou klavesu vyuzijeme v programech pro krok zpet? Ctrl+___ 
+20. Fyzicke casti pocitace nazyvame jednim slovem: 

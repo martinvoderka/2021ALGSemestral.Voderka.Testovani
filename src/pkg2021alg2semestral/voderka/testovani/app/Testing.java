@@ -33,6 +33,8 @@ public class Testing {
         System.out.print("Enter you name: ");
         name = sc.next();
         System.out.println("");
+        System.out.println("Odpovidej jednim slovem: ");
+        System.out.println("");
             
         try {    
             //setting the files and files path
@@ -66,7 +68,7 @@ public class Testing {
             //calculating time of test in milliseconds
             long timeDuration = Duration.between(startTime, finishTime).toMillis();
             timeDuration = timeDuration/1000;
-            System.out.format("Your result: %n %s - %d/%d points, %d seconds %n", name, points, 4, timeDuration);
+            System.out.format("Your result: %n%s - %d/%d points, %d seconds %n", name, points, 20, timeDuration);
             System.out.println("Do you want to save your score?");
             String saving = sc.next();
             if(saving.toLowerCase().contains("yes"))
