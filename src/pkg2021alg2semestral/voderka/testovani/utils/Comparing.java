@@ -6,13 +6,18 @@ import java.util.Collections;
 import java.util.Iterator;
 
 /**
- *
+ * Class to sort ArrayList of results
  * @author Martin
  */
 public class Comparing {
     
     static ResultsFile resFile = new ResultsFile();
     
+    /**
+     * Sorting ArrayList of results by points
+     * @return Sorted Arraylist in one String
+     * @throws FileNotFoundException 
+     */
     public String compareByPoints() throws FileNotFoundException{
         StringBuilder sb = new StringBuilder();
         Result result = new Result();
@@ -32,6 +37,11 @@ public class Comparing {
         return sb.toString();
     }
     
+    /**
+     * Sorting ArrayList of results by points
+     * @return Sorted Arraylist in one String
+     * @throws FileNotFoundException 
+     */
     public String compareByTime() throws FileNotFoundException{
         StringBuilder sb = new StringBuilder();
         CompareByTime timeComparator = new CompareByTime();

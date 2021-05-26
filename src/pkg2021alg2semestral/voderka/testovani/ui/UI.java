@@ -5,13 +5,18 @@ import java.util.Scanner;
 import pkg2021alg2semestral.voderka.testovani.app.Testing;
 
 /**
- *
+ * UI class to communication with user
  * @author Martin
  */
 public class UI {
 
     static Scanner sc = new Scanner (System.in);
     
+    /**
+     * Main method with Menu choosing option
+     * @param args
+     * @throws FileNotFoundException 
+     */
     public static void main(String[] args) throws FileNotFoundException {
         int choice;
         displayMenu();
@@ -26,10 +31,10 @@ public class UI {
                     testing.test();
                     break;
                 case 2:
-                    testing.resultsDuePoints();
+                    testing.resultsByPoints();
                     break;
                 case 3:
-                    testing.resultsDueTime();
+                    testing.resultsByTime();
                     break;
                 case 4:
                     System.out.println("Bye");
@@ -43,7 +48,9 @@ public class UI {
         System.out.println("Bye!");
     }
     
-    
+    /**
+     * Display menu on console
+     */
     private static void displayMenu(){
         System.out.println("---------------------------------------------");
         System.out.println("|  1    -           Start TEST              |");

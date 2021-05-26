@@ -11,7 +11,7 @@ import pkg2021alg2semestral.voderka.testovani.utils.ResultsFile;
 
 
 /**
- *
+ * Interface class with main methods to run test and display results
  * @author Martin
  */
 public class Testing {
@@ -36,9 +36,9 @@ public class Testing {
             
         try {    
             //setting the files and files path
-            File questions = new File("C:\\Users\\Martin\\Documents\\Semestral\\otazky.txt");
+            File questions = new File("data\\otazky.txt");
             Scanner questionFile = new Scanner(questions);
-            File answers = new File("C:\\Users\\Martin\\Documents\\Semestral\\odpovedi.txt");
+            File answers = new File("data\\odpovedi.txt");
             Scanner answerFile = new Scanner(answers);
 
             //saving curret time (java.time.instant)
@@ -82,7 +82,11 @@ public class Testing {
         }
     }
     
-    public void resultsDuePoints() throws FileNotFoundException{
+    /**
+     * Shows results from file sorted according to more points
+     * @throws FileNotFoundException 
+     */
+    public void resultsByPoints() throws FileNotFoundException{
         Comparing comparing = new Comparing();
         String results = comparing.compareByPoints();
         System.out.println("");
@@ -92,7 +96,11 @@ public class Testing {
         
     }
     
-    public void resultsDueTime() throws FileNotFoundException{
+    /**
+     * Swow results from file sorted according to small time
+     * @throws FileNotFoundException 
+     */
+    public void resultsByTime() throws FileNotFoundException{
         Comparing comparing = new Comparing();
         String results = comparing.compareByTime();
         System.out.println("");

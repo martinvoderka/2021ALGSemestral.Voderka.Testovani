@@ -1,7 +1,5 @@
 package pkg2021alg2semestral.voderka.testovani.utils;
-
 import java.util.ArrayList;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
@@ -14,19 +12,24 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Class to read binary file or add next result to binary file
  * @author Martin
  */
 public class ResultsFile {
     Result result = new Result();
     ArrayList<Result> results = new ArrayList<Result>();
 
+    /**
+     * Reads all binary file 
+     * @return ArrayList<Return> of results
+     * @throws FileNotFoundException 
+     */
     public ArrayList<Result> readResults () throws FileNotFoundException {
-        String name = "";
+        String name;
         int points;
         int time;
         results.clear();
-        try(DataInputStream dis = new DataInputStream(new FileInputStream(new File("C:\\Users\\Martin\\Documents\\Semestral\\results.dat")))){
+        try(DataInputStream dis = new DataInputStream(new FileInputStream(new File("data\\results.dat")))){
             boolean end = false;
             while(!end){
                 try{
@@ -47,6 +50,13 @@ public class ResultsFile {
         return results;
     }
     
+    /**
+     * Adds new result to the end of binary file
+     * @param name - name of tested person
+     * @param points - points gained throw test
+     * @param time - time of test duration
+     * @throws FileNotFoundException 
+     */
     public void addResults(String name, int points, int time) throws FileNotFoundException{
         results.clear();
         results = readResults();

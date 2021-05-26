@@ -1,7 +1,7 @@
 package pkg2021alg2semestral.voderka.testovani.utils;
 
 /**
- *
+ * Class that represents Result
  * @author Martin
  */
 public class Result implements Comparable<Result> {
