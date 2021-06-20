@@ -16,8 +16,8 @@ import pkg2021alg2semestral.voderka.testovani.utils.ResultsFile;
  */
 public class Testing {
     
-    static Scanner sc = new Scanner(System.in);
-    static PlaySound play = new PlaySound();
+    private static Scanner sc = new Scanner(System.in);
+    private static PlaySound play = new PlaySound();
     
     /**
      * Reads questions from file and comparing user answer with correct answers from file
