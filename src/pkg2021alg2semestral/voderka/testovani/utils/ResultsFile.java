@@ -16,20 +16,30 @@ import java.util.logging.Logger;
  * @author Martin
  */
 public class ResultsFile {
-    Result result = new Result();
-    ArrayList<Result> results = new ArrayList<Result>();
+    private ArrayList<Result> results = new ArrayList<Result>();
+    private String resultFile;
+
+    public ResultsFile() throws FileNotFoundException, IOException 
+    {
+        readResults();
+    }
+    
+    public ResultsFile (String file) throws FileNotFoundException, IOException
+    {
+        resultFile = file;
+        readResults();
+    }
 
     /**
      * Reads all binary file 
-     * @return ArrayList<Return> of results
      * @throws FileNotFoundException 
      */
-    public ArrayList<Result> readResults () throws FileNotFoundException {
+    public void readResults () throws FileNotFoundException, IOException {
         String name;
         int points;
         int time;
         results.clear();
-        try(DataInputStream dis = new DataInputStream(new FileInputStream(new File("data\\results.dat")))){
+        DataInputStream dis = new DataInputStream(new FileInputStream(new File("data\\" + resultFile)));
             boolean end = false;
             while(!end){
                 try{
@@ -42,12 +52,6 @@ public class ResultsFile {
                     end = true;
                 }
             }
- 
-        } catch (IOException ex) {
-            Logger.getLogger(ResultsFile.class.getName()).log(Level.SEVERE, null, ex);
-        }       
-        
-        return results;
     }
     
     /**
@@ -57,23 +61,27 @@ public class ResultsFile {
      * @param time - time of test duration
      * @throws FileNotFoundException 
      */
-    public void addResults(String name, int points, int time) throws FileNotFoundException{
-        results.clear();
-        results = readResults();
+    public void addResults(String name, int points, int time) throws FileNotFoundException, IOException{
         Result res = new Result(name, points, time);
         results.add(res);
         
-        try(DataOutputStream dos = new DataOutputStream(new FileOutputStream(new File("data\\results.dat")))){
+        DataOutputStream dos = new DataOutputStream(new FileOutputStream(new File("data\\" + resultFile)));
             for (Result r : results) {
                 dos.writeUTF(r.getName());
                 dos.writeInt(r.getPoints());
                 dos.writeInt(r.getTime());
             }
-        } catch (IOException ex) {
-            Logger.getLogger(ResultsFile.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
         
     }
+
+    public ArrayList<Result> getResults() {
+        return results;
+    }
+
+    public void setResultFile(String resultFile) {
+        this.resultFile = resultFile;
+    }
+    
     
 }

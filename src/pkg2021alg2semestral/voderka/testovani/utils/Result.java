@@ -34,7 +34,7 @@ public class Result implements Comparable<Result> {
     
     @Override
     public int compareTo(Result otherPlayer) {
-        return Integer.compare(getPoints(), otherPlayer.getPoints());
+        return -(Integer.compare(getPoints(), otherPlayer.getPoints()));
     }
     
 }

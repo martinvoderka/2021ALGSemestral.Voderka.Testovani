@@ -14,7 +14,7 @@ tranzistor
 bluetooth
 mys
 procesor
-binar
+binarni
 ram
 z
 hardware
