@@ -65,7 +65,7 @@ public class Questions {
      */
     public boolean isCorrect (String odpovedUzivatele, int cisloOtazky)
     {
-        return odpovedi.get(cisloOtazky - 1).toLowerCase().equals(odpovedUzivatele);
+        return odpovedi.get(cisloOtazky - 1).toLowerCase().equals(odpovedUzivatele.toLowerCase());
     }
     
 }
