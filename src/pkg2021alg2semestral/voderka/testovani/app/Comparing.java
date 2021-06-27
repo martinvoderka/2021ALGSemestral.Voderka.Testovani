@@ -21,8 +21,9 @@ public class Comparing {
     }
     
     /**
-     * Sorting ArrayList of results by points
-     * @return Sorted Arraylist in one String
+     * Compares list of results by option
+     * @param choice of sorting ( 1 - by points, 2 - by time )
+     * @return String of all results sorted
      * @throws FileNotFoundException 
      */
     public String compareBy(int choice) throws FileNotFoundException{
@@ -40,7 +41,11 @@ public class Comparing {
         return listToString();
     }
     
-    public String listToString ()
+    /**
+     * Changes private list to String by Stringbuilder
+     * @return String of all results
+     */
+    private String listToString ()
     {
         StringBuilder sb = new StringBuilder();
         for (Result r : resultsAL) {

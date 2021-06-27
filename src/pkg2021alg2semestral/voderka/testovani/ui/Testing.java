@@ -23,8 +23,8 @@ public class Testing {
     private static PlaySound play = new PlaySound();
     
     /**
-     * Reads questions from file and comparing user answer with correct answers from file
-     * 
+     * UI of test, prints questions and reads answers
+     * @throws IOException 
      */
     public void test() throws IOException{
         
@@ -35,9 +35,31 @@ public class Testing {
         String souborOdp = sc.next();
         Questions questions = new Questions(soubOtaz, souborOdp);
         PlaySound sound = new PlaySound();
+        Test test = new Test();
+        String name;
+        int nameCheck;
+        do {
         System.out.print("Enter you name: ");
-        String name = sc.next();
-        Test test = new Test(name);
+        name = sc.next();  
+        switch(nameCheck = test.checkName(name))
+        {
+            case 0: 
+                System.out.println("Correct name");
+                break;
+            case 1: 
+                System.out.println("1st letter must be capital");
+                break;
+            case 2: 
+                System.out.println("Name contains non-letter character");
+                break;
+            case 3: 
+                System.out.println("2nd and other characters can not be capital");
+                break;
+            case 4: 
+                System.out.println("Other problem");
+                break;
+        }
+        } while (nameCheck != 0);
         System.out.println("Odpovidej jednim slovem: ");
         System.out.println("");
         test.setTestStart();

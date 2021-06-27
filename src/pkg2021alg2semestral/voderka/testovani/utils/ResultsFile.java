@@ -75,10 +75,18 @@ public class ResultsFile {
         
     }
 
+    /**
+     * 
+     * @return results in arraylist
+     */
     public ArrayList<Result> getResults() {
         return results;
     }
 
+    /**
+     * Sets name of file with results
+     * @param resultFile 
+     */
     public void setResultFile(String resultFile) {
         this.resultFile = resultFile;
     }

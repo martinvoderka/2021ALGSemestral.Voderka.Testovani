@@ -28,21 +28,41 @@ public class Questions {
         
     }
     
+    /**
+     * 
+     * @return number of questions in private list
+     */
     public int getNumberOfQuestions()
     {
         return otazky.size();
     }
     
+    /**
+     * 
+     * @param cisloOtazky
+     * @return question on index from param
+     */
     public String getQuestion (int cisloOtazky)
     {
         return otazky.get(cisloOtazky - 1);
     }
     
+    /**
+     * 
+     * @param cislo odpovedi
+     * @return answer on index from param
+     */
     public String getOdpoved(int cislo)
     {
         return odpovedi.get(cislo - 1);
     }
     
+    /**
+     * 
+     * @param odpovedUzivatele
+     * @param cisloOtazky - index of answer
+     * @return true if userAnswer equals answer on index from param
+     */
     public boolean isCorrect (String odpovedUzivatele, int cisloOtazky)
     {
         return odpovedi.get(cisloOtazky - 1).toLowerCase().equals(odpovedUzivatele);
